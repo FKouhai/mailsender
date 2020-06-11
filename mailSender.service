@@ -1,0 +1,10 @@
+[Unit]
+Description=This is a script that sends you a mail everytime theres a new line in the sudo log
+
+[Install]
+WantedBy=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /mnt/particion/Projects/Python/mailSender.py
+Restart=always
